@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nueva Ventana</title>
+  </head>
+
+  <body>
+    <script>
+      document.write("<h3>Ejemplo de Ventana Nueva</h3>");
+      document.write("URL Completa: " + document.URL + "<br>");
+      document.write("Protocolo: " + document.protocol + "<br>");
+      document.write("Nombre en código del navegador: " + navigator.appCodeName + "<br>");
+
+      if (navigator.javaEnabled()) {
+        document.write("<h4>Java SI disponible en esta ventana</h4>");
+      } else {
+        document.write("<h4>Java NO disponible en esta ventana</h4>");
+      }
+
+      //document.write('<iframe src="https://www.google.es/" width="800px" height="600px" name="iframe"></iframe>');
+      document.write('<iframe src="https://elpais.com/" width="800px" height="600px" name="iframe"></iframe>');
+    </script>
+  </body>
+</html>
