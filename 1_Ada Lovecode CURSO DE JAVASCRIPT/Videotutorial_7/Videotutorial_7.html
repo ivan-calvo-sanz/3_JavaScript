@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Videotutorial 7</title>
+  </head>
+
+  <body>
+    <h1>Variables en JavaScript</h1>
+
+    <p id="parrafo1"></p>
+    <p id="parrafo2"></p>
+    <p id="parrafo3"></p>
+
+    <script>
+      /* VARIABLES EN JAVASCRIPT
+			- Identificadores únicos
+			- Recomendable utilizar identificadores descriptivos
+			- Empiezan por letra, $, _ u siguen con letra, numero, $ o _
+			- Pueden contener cadenas ("",'') y números (enteros o decimales)
+			- Sensibles a las mayúsculas (nombre != NOMBRE != Nombre)
+			- No pueden utilizarse palabras reservadas
+			*/
+
+      // Declaración de variable
+      let nombre;
+
+      //Mostramos el valor de la variable (undefined)
+      document.getElementById("parrafo1").innerHTML = nombre;
+
+      //Asignar valor a una variable
+      nombre = "Ada";
+
+      //Mostramos el valor de la variable (undefined)
+      document.getElementById("parrafo2").innerHTML = nombre;
+
+      //Declarar varias variables en una sola sentencia
+      //let pais, nacimiento;
+      let pais = "Reino Unido",
+        nacimiento = 1815;
+
+      //Asignar operaciones a una variable
+      let nombreApellido = "Ada" + " " + "Lovelace";
+      let fallecimiento = nacimiento + 37;
+
+      document.getElementById("parrafo3").innerHTML = nombreApellido + " " + " nació en " + pais + " en " + nacimiento + " y murió en " + fallecimiento;
+    </script>
+  </body>
+</html>
