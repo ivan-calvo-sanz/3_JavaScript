@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Videotutorial 22</title>
+	</head>
+
+	<body>
+		<h1>Repeticiones. Bucle for</h1>
+
+		<script>
+
+			/* SINTAXIS:
+			for(<sentencia_1>;<sentencia_2>;<sentencia_3>){
+				//Código que se repite
+			}
+			- SENTENCIA 1: se ejecuta antes de que empiece el bloque de código a repetir.
+			- SENTENCIA 2: define la condición por la que el bloque de código se va a ejecutar.
+			- SENTENCIA 3: se ejecuta después de que acabe el bloque de código a repetir
+			*/
+			for(let i=0;i<5;i++){
+				alert("i="+i);
+			}
+
+			// VARIACIONES
+			// 1- Si omitimos la primera sentencia debemos haber inicializado la variable con anterioridad
+			let j=1;
+			for( ; j<=5;j++){
+				alert("j="+j);
+			}
+
+			// 2- Si omitimos la segunda sentencia, dentro del código a repetir debemos incluir una instrucción break
+			for(let k=1; ;k++){
+				alert("k="+k);
+				if(k==5){
+					break;
+				}
+			}
+
+			// 3- Si omitimos la tercera sentencia,
+			for(let l=1; l<=5; ){
+				alert("l="+l);
+				l++;
+			}
+
+			// 4- Podemos trabajar con dos o más valores dentro del bucle for
+			for(let m=1,n=10;m<=10,n>=1;m++,n--){
+				alert("m="+m+", n="+n);
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Videotutorial 14</title>
+	</head>
+
+	<body>
+		<h1>Operadores de tipos en JavaScript</h1>
+
+		<script>
+
+			// TYPEOF: nos devuelve el tipo de dato de una variable
+			let cadena = "Ada Lovelace";
+			let numero=3.14;
+			let bool=true;
+			let lista=[1,2,3,4];
+			let registro={nombre:"Ada", apellido:"Lovelace"};
+			let fecha=new Date;
+			let miFuncion=function miFun() {alert("Hola");};
+			let sinDefinir;
+			let vacia=null;
+
+			alert (typeof cadena);		// devuelve string
+			alert (typeof numero);		// devuelve number
+			alert (typeof bool);		// devuelve boolean
+			alert (typeof lista);		// devuelve object
+			alert (typeof registro);	// devuelve object
+			alert (typeof fecha);		// devuelve object
+			alert (typeof miFuncion);	// devuelve function
+			alert (typeof sinDefinir);	// devuelve undefined
+			alert (typeof vacia);		// devuelve object
+
+
+			// INSTANCEOF: nos devuelve true si un objeto es una instancia de otro especificado
+			let animales=["perro","gato","hamster"];
+			alert(animales instanceof Array);	// devuelve true
+			alert(animales instanceof Object);	// devuelve true
+			alert(animales instanceof String);	// devuelve false
+			alert(animales instanceof Number);	// devuelve false
+
+		</script>
+	</body>
+</html>

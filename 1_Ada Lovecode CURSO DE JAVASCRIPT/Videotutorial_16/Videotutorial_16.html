@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Videotutorial 16</title>
+	</head>
+
+	<body>
+		<h1>Funciones - Introducción</h1>
+
+		<script>
+		
+			// SINTAXIS DE UNA FUNCION
+			// function nombre_funcion (<paréntesis_separados_por_comas>){ }
+
+			// Función sin parámetros
+			function saludo (){
+				alert("Hola");
+			}
+		
+			const resultadoSaludo=saludo();
+			alert (resultadoSaludo);
+
+			let resultadoSaludo2=saludo;
+			alert (resultadoSaludo2);
+
+
+			// Función con parámetros
+			function producto (a,b){
+				return a*b;
+			}
+			let resultado_producto=producto(3,4);
+			alert(resultado_producto);
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Videotutorial 17</title>
+	</head>
+
+	<body>
+		<h1>Funciones anónimas</h1>
+
+		<script>
+		
+			// Sintaxis de una función anónima
+			// function () {}
+			let producto=function (a,b){
+				return a*b;
+			}
+			let resultado=producto (3,6);
+			alert(resultado);
+
+			// EL CONSTRUCTOR FUNCTION()
+			let miFuncion = new Function ("a","b","return a*b;");
+			let resultado2 = miFuncion(5,7);
+			alert (resultado2);
+
+			// FUNCIONES ANONIMAS AUTOINVOCADAS
+			(function(){alert("Hola");}());
+
+		</script>
+	</body>
+</html>

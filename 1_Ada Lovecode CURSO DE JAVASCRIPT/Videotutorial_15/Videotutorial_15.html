@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Videotutorial 15</title>
+	</head>
+
+	<body>
+		<h1>Tipos de datos en JavaScript</h1>
+
+		<script>
+
+			let x = "Ada "+15;
+			alert(x);
+			x = 2 + 5 + " Ada";
+			alert(x);
+
+			// CADENAS o STRINGS
+			let cadena="Ada";
+			let cadena2=' Lovelace ';
+			let cadena3=" Ada 'Locecode'";
+			alert (cadena+cadena2+cadena3);
+
+			// NUMEROS
+			let entero=3;
+			let decimal=3.56;
+			alert(entero+decimal);
+
+			// NOTACION CIENTIFICA
+			let cientifica=12e5;
+			alert(cientifica);
+
+			// BOOLEANOS
+			let cierto=true;
+			let falso=false;
+			alert(cierto);
+			alert(falso);
+
+			// ARRAY
+			let lista=[1,"Hola",4,6,8,"CaraCola"];
+			alert(lista[1]);
+
+			// OBJETOS
+			let animal={nombre:"Lola",tipo:"Hamster",raza:"Rudo",edad:1};
+
+			// OPERADOR typeof
+			alert(typeof cadena);
+			alert(typeof cierto);
+			alert(typeof lista);
+
+			// UNDEFINED
+			let objetoSinDefinir;
+			alert(objetoSinDefinir);
+			cadena=undefined;
+			alert(cadena);
+
+			// VACIO
+			let cadena4="";
+			alert("Cadena: "+cadena4+" tipo: "+typeof cadena4);
+
+			// NULL
+			animal=null;
+			alert("Animal: "+animal+" tipo: "+ typeof animal);
+
+			// NULOS vs NO DEFINIDOS
+			typeof undefined;	// Devuelve undefined
+			alert(typeof undefined);
+			typeof null;		// Devuelve objeto
+			alert(typeof null);
+			null===undefined;	// Devuelve false
+			alert(null===undefined);
+			null==undefined;	// Devuelve true
+			alert(null==undefined);
+
+		</script>
+	</body>
+</html>
