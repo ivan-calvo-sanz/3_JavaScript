@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Videotutorial 46</title>
+	</head>
+
+	<body>
+		<h1>Objetos del navegador. Location</h1>
+		<p id="location"></p>
+
+		<script>
+
+		/* CARACTERISTICAS:
+		- Guarda información de la URL actual.
+		- No hay un estándar público pero la mayoría de los navegadores
+		soportan este objeto
+		*/
+
+		// PROPIEDADES DEL OBJETO LOCATION
+		let txt="";
+		//href: HREF (URL) de la página
+		txt+="<br>Href: "+location.href;
+		//hostname: nombre del host de la página
+		txt+="<br>Hostname: "+location.hostname;
+		//pathname: pathname de la página
+		txt+="<br>Pathname: "+location.pathname;
+		//protocol: protocol de la página
+		txt+="<br>Protocol: "+location.protocol;
+		//hash: hash o ancla de la página
+		// ejm: www.web.com/index.html#indice
+		txt+="<br>Hash: "+location.hash;
+
+		//host: nombre del hostname y el puerto
+		txt+="<br>Host: "+location.host;
+		//origin: nombre del protocolo, hostname y el puerto
+		txt+="<br>origin: "+location.origin;
+		//search: querystring de la página
+		//ejm: www.web.com/index.html?user=ada
+		txt+="<br>search: "+location.search;
+
+		document.getElementById("location").innerHTML=txt;
+
+		
+		//METODOS DEL OBJETO LOCATION
+		//assign(<url>): asigna nuevo documento a la página
+		function nuevoDocumento(){
+			location.assign("http://www.google.com");
+		}
+
+		//reload(<url>): recarga la página
+		function recarga(){
+			location.reload();
+		}
+
+		//replace(<url>): sustituye la página por otra. DESAPARECE SU HISTORIAL
+		function sustituye(){
+			location.replace("http://www.google.com");
+		}
+
+
+
+		</script>
+
+		<button onclick="nuevoDocumento()">Carga nuevo Documento</button>
+		<button onclick="recarga()">Recarga la página</button>
+		<button onclick="sustituye()">Sustituye la página</button>
+
+
+	</body>
+</html>

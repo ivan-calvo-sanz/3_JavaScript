@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Videotutorial 31</title>
+	</head>
+
+	<body>
+		<h1>Objetos nativos. String</h1>
+
+		<script>
+
+			// INSTANCIACIÓN:
+			let daw="Desarrollo de Aplicaciones Web";
+			let dam='Desarrollo de Aplicaciones Multiplataforma';
+			let asir="Administración de 'Sistemas Informáticos' en Red";
+			let smr="Sistemas \"Microinformáticos\" y Redes";
+			let ciclos=new String("");
+
+			// CONCATENACION DE CADENAS
+			ciclos += "Hay 3 Ciclos de Grado Superior: \n";
+			ciclos += daw + ", "+dam+" y "+ asir + "\n";
+			ciclos += " y 1 Ciclo de Grado Medio: \n";
+			ciclos += smr;
+
+			alert(ciclos);
+
+			// PROPIEDADES
+			// length: devuelve la longitud de una cadena
+			alert("La longitud de la cadena ciclos es: "+ciclos.length);
+
+			// METODOS:
+			// BUSQUEDA:
+			// CharAt(<num>): devuelve el caracter de una posición.
+			alert("El carácter 16 de la cedna ciclos es: "+ciclos.charAt(16));
+
+			// indexOf(<caracter>): devuelve la PRIMERA posición del caracter
+			alert("La PRIMERA aparición de 'a': "+ciclos.indexOf("a"));
+
+			//lastIndexOf(<caracter>): devuelve la ULTIMA posición del caracter
+			alert("La ULTIMA aparición de 'a': "+ciclos.lastIndexOf("a"));
+
+			//search(<cadena|expresion>): 
+			alert("Busca la cadena 'web' en la variable daw: "+daw.search("Web"));
+
+			//match(<expresion regular>): busca una expresion regular en otra cadena
+
+			//COMPARACION:
+			//localeCompare(<cadena>): devuelve -1 (antes), 0 (igual), 1 (después)
+			alert("¿Es daw menor que dam? "+daw.localeCompare(dam));
+
+			//INCLUYE, EMPIEZA O TERMINA
+			//includes(<cadena>): devuelve true si la cadena incluye el parametro
+			alert("¿Incluye 'Aplicaciones' daw? "+daw.includes("Aplicaciones"));
+			//startsWith(<cadena>): devuelve true si la cadena empieza con el parametro
+			alert("¿Empieza daw con la palabra 'aplicaciones'? "+daw.startsWith("Aplicaciones"));
+			//endsWith(<cadena>): devuelve true si la cadena FINALIZA con el parametro
+			alert("¿Acaba daw con la palabra 'aplicaciones'? "+daw.endsWith("Aplicaciones"));
+
+			//CONCATENACION Y REPETICION:
+			//concat(<cadena>): concatena a la cadena el parámetro:
+			alert("Concatena daw con dam \n"+daw.concat(dam));
+			//repeat(<numero>):repetir la cadena el número de veces que aparece como parámetro
+			alert("Repetir daw \n"+daw.repeat(3));
+
+			//EXTRACCION:
+			//slice(<posicion inicial>,<posicion final>): devuelve la cadena comprendida entre ambas posiciones:
+			alert("La cadena que hay entre el 4 y el 6 en daw es: "+daw.slice(4,6));
+			//desde una posicion hasta el final
+			alert("La cadena que hay desde el 4 hasta el final es: "+daw.slice(4));
+			//para sacar el primer caracter
+			alert("PRIMER caracter de la cadena daw es: "+daw.slice(0,1));
+			//para sacar la ULTIMA caracter
+			alert("la ULTIMA posicion de la cadena daw es: "+daw.slice(-1));
+
+			//substring(<posicion inicial>,<posicion final>): devuelve la cadena comprendida entre ambas posiciones
+			alert("La cadena que hay entre el 0 y el 1 en daw es: "+daw.substring(0,1));
+
+			//substr(<posicion inicial>,<numero de caracteres>): devuelve la cadena comprendida entre la posición inicial y el número de caracteres
+			alert("La cadena de 5 caracteres que hay a partir del caracter 7 es: "+daw.substr(5,5));
+
+			//split(<caracter>,[<numero de veces>]): divide la cadena en un array de subcadenas separadas por el caracter
+			alert("La cadena daw separada por espacios es: "+daw.split(" ",2));
+			console.log(daw.split(" ",3));
+			console.log(daw.split(""));
+
+			//trim: extrae los caracteres de la cadena eliminando los espacion del principio y final
+			console.log("la cadena sin espacios quedaría: \n"+"    Hola, caracola       ".trim());
+
+			//MAYUSCULAS Y MINUSCULAS
+			//toLowerCase(): devuelve la cadena en minúsculas:
+			console.log(daw.toLowerCase());
+			//toUpperCase(): devuelve la cadena en MAYUSCULAS:
+			console.log(daw.toUpperCase());
+
+			//METODOS ESPECIALES
+			//toString: devuelve el valor del objeto String
+			//valueOf: devuelve el valor primitivo del Objeto
+
+		</script>
+	</body>
+</html>

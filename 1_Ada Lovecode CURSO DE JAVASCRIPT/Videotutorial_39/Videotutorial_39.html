@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Videotutorial 39</title>
+	</head>
+
+	<body>
+		<h1>Objetos del navegador. Window</h1>
+		<p id="ventana"></p>
+
+		<script>
+
+		/* CRACTERISTICAS
+		- Representa una ventana abierta en un navegador
+		- Si una ventana tiene etiquetas de tipo <iframe> el navegador
+		crea un objeto window para el html inicial y uno para cada <iframe>
+		- Todos los objetos, funcione, variables...son miembros del objeto window:
+		las funciones son sus métodos; las variables globales y el DOM son propiedades
+		- NO todos los métodos sirven para todos los navegadores: hay que comprobar la compatibilidad
+		*/
+
+		// PROPIEDADES BASICAS DE WINDOW
+		window.name="Mi ventana";
+		let texto="";
+		texto+="<br>Nombre: "+window.name;
+		
+
+		//Tamaño de la ventana CON toolbar y scrollbar
+		texto+="<br>Ancho externo CON toolbar y scrollbar: "+window.outerWidth;
+		texto+="<br>Alto externo CON toolbar y scrollbar: "+window.outerHeight;
+		
+
+		//Tamaño de la ventana SIN toolbar y scrollbar
+		texto+="<br>Ancho externo SIN toolbar y scrollbar: "+window.innerWidth;
+		texto+="<br>Alto externo SIN toolbar y scrollbar: "+window.innerHeight;
+		
+
+		//Scroll horizontal y vertical
+		texto+="<br>Scroll horizontal: "+window.pageXOffset;
+		texto+="<br>Scroll vertical: "+window.pageYOffset;
+
+
+		//Distancia de la esquina superior izquierda
+		texto+="<br>Distancia desde la izquierda: "+window.screenX;
+		texto+="<br>Distancia desde arriba: "+window.screenY;
+
+		console.log(texto);
+		document.getElementById("ventana").innerHTML=texto;
+
+		/* PROPIEDADES CON IFRAMES:
+		- frames: devuelve todos los elementos iframe de la ventana.
+		- frameElement: devuelve el frame en el que la ventana está insertada.
+		- length: devuelve el número de frames que tiene la ventana
+		*/
+		/* PROPIEDADES CON OTRAS VENTANAS:
+		- closed: devuelve un booleano si la ventana está cerrada
+		- opener: devuelve una referencia con la ventana que sreó la ventana actual
+		- parent: devuelve la ventana padre de la ventana actual.
+		- self: devuelve la ventana actual
+		*/
+
+		/* OTROS OBJETOS DEL NAVEGADOR:
+		window.document
+		window.navigator
+		window.screen
+		window.history
+		window.location
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Videotutorial 38</title>
+	</head>
+
+	<body>
+		<h1>Objetos nativos. Boolean</h1>
+
+		<script>
+
+		//Función Boolean()
+		console.log(10>9);
+
+		//Todos los valores reales son ciertos
+		console.log("100 es "+Boolean(100));
+		console.log("3.4 es "+Boolean(3.4));
+		console.log("Hola es "+Boolean("Hola"));
+		console.log("false "+Boolean("false"));
+		console.log("-15 es "+Boolean(-15));
+		console.log("5<6 es "+Boolean(5<6));
+		
+		//Todos los valores que no son reales son falsos
+		console.log("0 es "+Boolean(0));
+		console.log("-0 es "+Boolean(-0));
+		console.log("undefined es "+Boolean(undefined));
+		console.log("null es "+Boolean(null));
+		console.log("false es "+Boolean(false));
+		console.log("NaN es "+Boolean(NaN));
+
+		let g;
+		if(!g){
+			console.log("La g NO está definida");
+		}
+
+		</script>
+	</body>
+</html>

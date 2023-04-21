@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Videotutorial 37</title>
+	</head>
+
+	<body>
+		<h1>Objetos nativos. Date</h1>
+
+		<script>
+
+		//METODOS GET
+		//extraer de una fecha un campo en particular
+		let fc=new Date("October 1, 2016 10:30:20");
+		console.log(fc.getDay()+" "+fc.getDate()+"/"+fc.getMonth()+"/"+fc.getFullYear());
+		console.log(fc.getHours()+":"+fc.getMinutes()+":"+fc.getSeconds()+":"+fc.getMilliseconds());
+		console.log("Ms desde 1/1/1970: "+fc.getTime());
+
+		//METODOS SET 
+		fc.setDate(31);
+		fc.setMonth(11);
+		fc.setFullYear(2031);
+		fc.setHours(23);
+		fc.setMinutes(59);
+		fc.setSeconds(59);
+		fc.setMilliseconds(59);
+		console.log(fc);
+		//fc.setTime(<ms>); //Modificariamos la fecha y la hora contando los milisegundos desde el 1/1/1970
+
+
+		//Ejemplo de cálculo de horas
+		fc.setMonth(fc.getMonth()+3);
+		console.log(fc.toString());
+
+		</script>
+	</body>
+</html>

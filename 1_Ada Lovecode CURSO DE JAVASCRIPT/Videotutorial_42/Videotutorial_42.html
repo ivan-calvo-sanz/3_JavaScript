@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Videotutorial 42</title>
+	</head>
+
+	<body>
+		<h1>Objetos del navegador. Window. Tiempo</h1>
+
+		<script>
+			/* EVENTOS DE TIEMPO:
+			- El objeto Window permite ejeutar código en intervalos de tiempo.
+			setTimeout, clearTimeout, setInterval
+			*/
+
+			/*setTimeout(<funcion>,<milisegundos>): se indica cuantos segundos tiene que pasar antes de que la funcióm
+			se ejeute
+			*/
+
+			function saludar(){
+				alert("¡Hola!");
+			}
+
+			// clearTimeout(<variable timeout>): si asignamos un setTimeout a una variable podemos detener su ejecución
+
+
+
+			
+		</script>
+		<button onclick="setTimeout(saludar,3000)">Saluda</button>
+		<button onclick="sal=setTimeout(saludar,1500)">Saluda con variable</button>
+		<button onclick="clearTimeout(sal)">Cancelar</button>
+
+	</body>
+</html>

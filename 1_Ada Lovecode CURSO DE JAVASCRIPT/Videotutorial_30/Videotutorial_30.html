@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Videotutorial 30</title>
+	</head>
+
+	<body>
+		<h1>Objetos nativos. String</h1>
+
+		<script>
+
+			// INSTANCIACIÓN:
+			let daw="Desarrollo de Aplicaciones Web";
+			let dam='Desarrollo de Aplicaciones Multiplataforma';
+			let asir="Administración de 'Sistemas Informáticos' en Red";
+			let smr="Sistemas \"Microinformáticos\" y Redes";
+			let ciclos=new String("");
+
+			// CONCATENACION DE CADENAS
+			ciclos += "Hay 3 Ciclos de Grado Superior: \n";
+			ciclos += daw + ", "+dam+" y "+ asir + "\n";
+			ciclos += " y 1 Ciclo de Grado Medio: \n";
+			ciclos += smr;
+
+			alert(ciclos);
+
+			// PROPIEDADES
+			// length: devuelve la longitud de una cadena
+			alert("La longitud de la cadena ciclos es: "+ciclos.length);
+
+			// METODOS:
+			// BUSQUEDA:
+			// CharAt(<num>): devuelve el caracter de una posición.
+			alert("El carácter 16 de la cedna ciclos es: "+ciclos.charAt(16));
+
+			// indexOf(<caracter>): devuelve la PRIMERA posición del caracter
+			alert("La PRIMERA aparición de 'a': "+ciclos.indexOf("a"));
+
+			//lastIndexOf(<caracter>): devuelve la ULTIMA posición del caracter
+			alert("La ULTIMA aparición de 'a': "+ciclos.lastIndexOf("a"));
+
+			//search(<cadena|expresion>): 
+			alert("Busca la cadena 'web' en la variable daw: "+daw.search("Web"));
+
+			//match(<expresion regular>): busca una expresion regular en otra cadena
+
+			//COMPARACION:
+			//localeCompare(<cadena>): devuelve -1 (antes), 0 (igual), 1 (después)
+			alert("¿Es daw menor que dam? "+daw.localeCompare(dam));
+
+		</script>
+	</body>
+</html>

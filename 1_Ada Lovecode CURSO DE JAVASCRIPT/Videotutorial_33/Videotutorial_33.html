@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Videotutorial 33</title>
+	</head>
+
+	<body>
+		<h1>Objetos nativos. Number</h1>
+
+		<script>
+
+		//PROPIEDADES
+		let maximo=Number.MAX_VALUE;
+		let minimo=Number.MIN_VALUE;
+		let neginf=Number.NEGATIVE_INFINITY;
+		let posinf=Number.POSITIVE_INFINITY;
+		console.log(maximo);
+		console.log(minimo);
+		console.log(neginf);
+		console.log(posinf);
+
+		let numNaN=Number.NaN;
+		console.log(numNaN);
+
+		//METODOS
+		//toFixed(<num decimales>): cadena con el número específico de decimales indicado
+		let x=9.8765;
+		console.log(x.toFixed(0));
+		console.log(x.toFixed(2));
+		console.log(x.toFixed(6));
+
+		//toPrecision(<num cifras>):cadena con el número especifico de cifras indicado:
+		let y=9.8765;
+		console.log(y.toPrecision());
+		console.log(y.toPrecision(2));
+		console.log(y.toPrecision(6));
+
+		//toExponential:cadena con el número redondeado a notación cientifica
+		let z=123456789;
+		console.log(y.toExponential(2));
+
+		//valueOf: devuelve el valor primitivo de un objeto
+		//toString: devuelve la cadena de un número
+		let j=123;
+		console.log(j.toString());
+
+		//METODOS GLOBALES PARA CONVERTIR VARIABLES EN NUMEROS:
+		//Number(): devuelve el valor numerico de una variable
+		console.log(Number(true));	//devuelve 1
+		console.log(Number(false));	//devuelve 0
+		console.log(Number(new Date()));	//devuelve n2 de milisegundos desde el 01/01/1970
+		console.log(Number("10"));	//devuelve el número de la cadena
+		console.log(Number("casa"));	//devuelve que NO es un número
+
+		//parseInt() / parseFloat():
+		console.log(parseInt("10.6")); //devuelve el número entero
+		console.log(parseFloat("10.6")); //devuelve el número decimal
+		console.log(parseInt("10 casa")); //devuelve el primer número
+		console.log(parseInt("casa 10")); //devuelve NaN
+
+		</script>
+	</body>
+</html>

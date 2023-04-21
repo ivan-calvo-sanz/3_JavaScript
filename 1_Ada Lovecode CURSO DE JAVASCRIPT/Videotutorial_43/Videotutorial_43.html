@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Videotutorial 43</title>
+	</head>
+
+	<body>
+		<h1>Objetos del navegador. Navigator</h1>
+		<p id="navegador"></p>
+
+		<script>
+			/* CARACTERISTICAS:
+			- Guarda información sobre el navegador.
+			- No hay un estándar público pero la mayoría de los
+			navegadores soportan este objeto */
+
+			//PROPIEDADES DEL OBJETO NAVIGATOR
+			let texto="";
+			//appCodeName: codeName del navegador
+			texto+="<br>CodeName: "+navigator.appCodeName;
+			//appName: appName del navegador
+			texto+="<br>appName: "+navigator.appName;
+			//appVersion: appVersion del navegador
+			texto+="<br>appVersion: "+navigator.appVersion;
+
+			//product: motor del navegador
+			texto+="<br>product: "+navigator.product;
+
+			//platform: plataforma del navegador
+			texto+="<br>platform: "+navigator.platform;
+
+			//online: si el navegador está online u offline
+			texto+="<br>online: "+navigator.online;
+
+			//language: idioma del navegador
+			texto+="<br>Idioma: "+navigator.language;
+
+			//cookieEnabled: cookies activadas o no
+			texto+="<br>Cookies: "+navigator.cookieEnabled;
+
+			//userAgent: motor de navegacion
+			texto+="<br>Cabecera user-agent: "+navigator.userAgent;
+
+			/*geolocation: devuelve un objeto geolocation que puede
+			servir para localizzar la posición del usuaio */
+			texto+="<br>Geolocation: "+navigator.geolocation;
+
+			//METODO DEL OBJETO NAVEGADOR
+			//javaEnabled(): devuelve true o false si está activado Java
+			alert("Java activado: "+navigator.javaEnabled());
+
+
+
+			document.getElementById("navegador").innerHTML=texto;
+
+
+			
+		</script>
+
+
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Videotutorial 36</title>
+	</head>
+
+	<body>
+		<h1>Objetos nativos. Date</h1>
+
+		<script>
+
+		/* CREACION DE OBJETOS DE TIPO DATE.
+		Nota: los meses comienzan en 0. Los días de la semana también,
+		siendo el 0 el domingo, el 1 el lunes... */
+
+		//Creación de fecha actual:
+		let actual=new Date();
+		console.log(actual);
+
+		//Creación de fecha con cadenas:
+		let d1=new Date("Wed Mar 25 2015 09:23:45 GMT +0100 (W. Europe Standard Time)"); //Ignora si el dia de la semana es incorrecto o los paréntesis
+		let d2=new Date("October 12, 2016 10:30:00");
+		let d3=new Date("January 25 2015");
+		let d4=new Date("Jan 25 2015");	// También "25 Jan 2015"
+
+		let d5=new Date("2016-05-12T12:34:25");
+		let d6=new Date("2016-05-12");  // YYYY-MM-DD
+		let d7=new Date("2016/05/12");	// YYYY/MM/DD o DD/MM/YYYY
+		let d8=new Date("2016-05");	// El día se sustituye por 1
+		let d9=new Date("2016");	// El día y el mes se sustituyen por 1
+	
+		// ¡OJO! Incluimos 0 en dias/meses inferiores a 10
+		console.log(d1);
+		console.log(d2);
+		console.log(d3);
+		console.log(d4);
+		console.log(d5);
+		console.log(d6);
+		console.log(d7);
+		console.log(d8);
+		console.log(d9);
+
+		//Creación de fecha con milisegundos
+		let dms=new Date(86400000);
+		console.log(dms);
+
+		//Creación de fechas con numeros	
+		let fechaLargo=new Date(2015,11,10,14,30,25);
+		let fechaCorto=new Date(2015,11,10);
+		console.log(fechaLargo);
+		console.log(fechaCorto);
+
+		//Imprimir fecha
+		let fecha=new Date();
+		console.log("Fecha"+fecha);
+		console.log("toString"+fecha.toString());
+		console.log("toUTCString"+fecha.toUTCString());
+		console.log("toDateString"+fecha.toDateString());
+
+		</script>
+	</body>
+</html>

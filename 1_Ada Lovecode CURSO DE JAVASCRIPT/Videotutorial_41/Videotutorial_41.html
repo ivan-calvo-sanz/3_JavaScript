@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Videotutorial 41</title>
+	</head>
+
+	<body>
+		<h1>Objetos del navegador. Cuadros de dialogo</h1>
+
+		<script>
+			//alert(<mensaje>): muestra un mensaje al usuario y no devuelve ningún valor.
+			alert("Hola, caracola");
+
+			/*prompt(<mensaje>,[<texto por defecto>]): muestra un mensaje al usuario y un campo que puede contener
+			o no texto por defecto. Lo que introduzca el usuario se almacenará en una variable a la que se asigna
+			*/
+			let respuesta=prompt("¿Cúal es tu nombre?","Introduce un nombre");
+			alert("Hola, "+respuesta);
+
+			/*confirm(<mensaje>): muestra un mensaje al usuario y dos botones. 
+			Si el usuario pulsa "Aceptar" devuelve true; si pulsa "Cancelar" o 
+			cierra devuelve false.
+			*/
+			let respuesta2=confirm("¿te gusta javascript?");
+			if(respuesta2) alert("¡Me alegro!");
+			else alert("Pues es una pena");
+			
+		</script>
+
+	</body>
+</html>
