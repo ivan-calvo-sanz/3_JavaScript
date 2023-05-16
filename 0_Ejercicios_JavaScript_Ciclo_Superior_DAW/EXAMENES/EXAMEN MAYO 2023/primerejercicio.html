@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="es-es">
+	<head> 
+		<title> Biblioteca </title>
+		<meta charset="UTF-8">
+		<style>
+		    body { background-color:#ccffcc; }
+			.tamano { width: 100%;
+					  height: 250px; }
+			.azul  { background-color: #C1D5DE;}
+			.naranja {background-color: #DEDBC1; }
+			img {
+			      width: 70px;
+				  height: 60px;
+				  margin-right: 20px;
+				 }			
+		</style>
+		<!--ruta para cargar el script-->	
+		<script type="text/javascript" src="ivan_calvo_ejercicio1.js"></script>
+	</head>
+<body>
+	<form>
+			Biblioteca: 
+			<label id="Biblioteca"></label>
+ 
+	</form>
+	
+	<div class="tamano azul">
+		<h2> Panel de operaciones </h2>
+			<form>
+				<input type="button" value="Agregar Libro" id="insertar">Planta: 
+				<select id="planta">
+					<option value="Astronomía" selected="selected">Astronomía</option>
+					<option value="Geografía">Geografía</option>
+					<option value="Tecnología">Tecnología</option>
+				</select>
+				Título: <input type="text" id="nombre"><br><br>
+				<input type="button" value="Libros planta" id="nombreplanta"><br><br>
+				<input type="button" value="Código" id="codigo"> <br><br>
+				<input type="button" value="Título" id="book">
+				Número: <input type="text" id="numero"><br>
+			</form>
+	</div>
+
+	<div class="tamano naranja" id="resultados">
+		<h2> Panel de resultados</h2>
+		<img id="imagen">
+		<span id="texto"></span>
+	</div>
+</body>
+</html>

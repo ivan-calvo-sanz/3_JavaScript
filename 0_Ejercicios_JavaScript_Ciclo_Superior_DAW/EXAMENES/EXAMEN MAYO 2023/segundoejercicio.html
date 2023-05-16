@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+	<title> Colores</title>
+	<meta charset="UTF-8">
+	<style>
+	    body { background-color:#ccffcc; }
+		.azul { background-color:blue;}
+		.fondoblanco {color:white;}
+		.seleccionado {border: 5px solid magenta;}
+		.verde { background-color:green;}
+		.amarillo {background-color: #FFFFCC;}
+		.rojo {background-color:red;}
+		.marron {background-color:brown;}
+		.naranja {background-color:orange;}
+		.dim {
+				width:200px;
+				padding:10px;}
+		.borde {
+				margin:5px;
+				padding: 5px;}
+		span { width:140px;
+		       height:30px;}
+		table {
+				border: 2px;}
+				
+		#tabla td {
+			width: 80px;
+			height: 60px;
+			color: white;
+		}
+	</style>
+	<!--ruta para cargar el script-->	
+	<script type="text/javascript" src="ivan_calvo_ejercicio2.js"></script>
+</head>
+<body>
+<h1> Colores</h1>
+<div id="cabecera" class="naranja dim"><span class="seleccionado azul fondoblanco borde"></span><span class="verde fondoblanco borde"></span><span class="rojo fondoblanco borde"></span><span class="marron fondoblanco borde"></span></div>
+<br><input type="button" value="pulsa" id="pulsa">
+<div id="cuerpo" class="amarillo">
+	<h1>Resultados</h1>
+	<table id="tabla"></table>
+</div>
+<br>
+<div id="pie" class="naranja dim"></div>
+</body>

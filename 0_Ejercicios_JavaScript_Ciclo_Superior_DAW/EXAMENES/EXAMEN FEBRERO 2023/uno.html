@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio UNO</title>
+</head>
+<body>
+    <script>
+
+    let marcas=new Array();
+    do {
+        marca=prompt("Introduzca marca o fin");
+        if(marca!="fin" && marca!=" "){
+            marcas.push(marca);
+        }
+        //console.log(marcas);
+    } while (marca!="fin");
+
+
+    //*** APARTADO 1
+    document.write("<hr><h4>APARTADO 1</h4>");
+    document.write(`El número de marcas de coches introducido son: ${marcas.length}`);
+
+    //*** APARTADO 2
+    document.write("<hr><h4>APARTADO 2</h4>");
+    marcasCopia=marcas.slice();
+    for(let i in marcasCopia){
+        if(i%2==0){
+            marcasCopia[i]=marcasCopia[i].toUpperCase();
+        }else{
+            marcasCopia[i]=marcasCopia[i].toLowerCase();
+        }
+    }
+    document.write(marcasCopia.join(", "));
+
+    //*** APARTADO 3
+    document.write("<hr><h4>APARTADO 3</h4>");
+    let marcasInverso=marcas.reverse();
+    document.write(marcas.join(", "));
+
+    //*** APARTADO 4
+    document.write("<hr><h4>APARTADO 4</h4>");
+    let texto;
+    //no me acuerdo de realizar la expresión regular de numeros
+    //let re=(0-9)/g;
+/*     for(let i in marcas){
+        let coincidencias=marcas[i].match(re);
+        console.log(coincidencias);
+        if(coincidencias.length>0){
+            texto+=marcas[i]+" lugar "
+        }
+    }
+    document.write(texto); */
+
+
+    //*** APARTADO 5
+    document.write("<hr><h4>APARTADO 5</h4>");
+    marcasUnidas=marcas.join("").toLowerCase();
+    document.write(marcasUnidas+"<br>");
+    document.write(marcasUnidas.split("").sort().join(""));
+
+    </script>
+</body>
+</html>

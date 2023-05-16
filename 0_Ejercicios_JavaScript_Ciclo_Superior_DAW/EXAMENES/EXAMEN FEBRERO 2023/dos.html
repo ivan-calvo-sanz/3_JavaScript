@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio DOS</title>
+</head>
+<body>
+    <div id="texto"></div>
+    <script>
+        class Parking{
+            nombre;
+            plazasPlanta;
+            cochesTotales;
+            plantas=new Array();
+            letras=["A","B","C","D","E"];
+
+            //Contructor
+            constructor(nombre,plazasPlanta){
+                this.nombre=nombre;
+                this.plazasPlanta=plazasPlanta;
+                this.cochesTotales=0;
+
+                //creo las Plazas por cada Planta
+                for(let i=0; i<this.letras.length; i++){
+                    this.plantas[i]=new Array();
+                    //console.log(this.letras[i]);
+                    for(let j=0; j<this.plazasPlanta; j++){
+                        console.log(this.letras[i]);
+                        //this.plantas[i][j]=new Plaza((""+this.letras[i]),j+1,"");
+                        this.plantas[i][j]="";
+
+                    }
+                }
+                console.log(this.plantas);
+            }
+
+            devuelveNombre(){
+                return this.nombre;
+            }
+
+            totalCoches(){
+                return this.cochesTotales;
+            }
+
+            parkingLleno(){
+                let lleno=true;
+                for(let i=0; i<this.letras.length; i++){
+                    for(let j=0; j<this.plazasPlanta; j++){
+                        //if(this.plantas[i][j].getMatricula()===""){
+                        if(this.plantas[i][j]===""){
+                            lleno=false;
+                        }
+                    }
+                }
+                return lleno;
+            }
+
+            parkingVacio(){
+                let vacio=true;
+                for(let i=0; i<this.letras.length; i++){
+                    for(let j=0; j<this.plazasPlanta; j++){
+                        //if(this.plantas[i][j].getMatricula()===""){
+                        if(this.plantas[i][j]!=""){
+                            vacio=false;
+                        }
+                    }
+                }
+                return vacio;
+            }
+
+            plazaVacia(plaza){
+                let libre=false;
+                //if(plaza.getMatricula()===""){
+                if(this.plantas[plaza.slice(0,1).toUpperCase().charCodeAt()-65][plaza.slice(1)-1]===""){
+                    libre=true;
+                }
+                return libre;
+            }
+
+            datosNuevos(plaza, matricula){
+                this.plantas[plaza.slice(0,1).toUpperCase().charCodeAt()-65][plaza.slice(1)-1]=matricula;
+            }
+
+            liberarPlaza(plaza){
+                this.plantas[plaza.slice(0,1).toUpperCase().charCodeAt()-65][plaza.slice(1)-1]="";
+                this.cochesTotales--;
+            }
+
+            consultarPlaza(plaza){
+                return this.plantas[plaza.slice(0,1).toUpperCase().charCodeAt()-65][plaza.slice(1)-1];
+            }
+
+            consultarDatos(){
+                let fecha=new Date();
+                let devuele=`<br><b>Parking: </b> ${this.devuelveNombre()}`;
+                devuelve+=`<br><b>Fecha: </b> ${fecha}`;
+                devuelve+=`<br><b>Coches que han salido del Parking: </b> ${devuelveCochesTotales()}`;
+                devuelve+=`<br><table>`;
+                for(let i=0; i<this.letras.length; i++){
+                    devuelve+=`<tr>`;
+                    for(let j=0; j<this.plazasPlanta; j++){
+                        let plaza=j+String.fromCharCode(i+65);
+                        devuelve+=`<td>${j}${String.fromCharCode(i+65)}</td><td>${consultarPlaza(plaza)}</td>`;
+                    }
+                }
+                return devuele;
+            }    
+
+            plazasLibres(){
+                let fecha=new Date();
+                let devuelve=`<br><b>Parking: </b> ${this.devuelveNombre()}`;
+                devuelve+=`<br><b>Fecha: </b> ${fecha}`;
+                devuelve+=`<br><b>Informacion de plazas:</b><br>`;
+                for(let i=0; i<this.letras.length; i++){
+                    for(let j=0; j<this.plazasPlanta; j++){
+                        if(this.plantas[i][j]===""){
+                            devuelve+=`<b>${j}${String.fromCharCode(i+65)}</b>`;
+                        }
+                    }
+                }
+                return devuelve;
+            }
+
+            plazasOcupadas(){
+                let fecha=new Date();
+                let devuelve=`<br><b>Parking: </b> ${this.devuelveNombre()}`;
+                devuelve+=`<br><b>Fecha: </b> ${fecha}`;
+                devuelve+=`<br><b>Informacion de plazas Ocupadas:</b><br>`;
+                for(let i=0; i<this.letras.length; i++){
+                    for(let j=0; j<this.plazasPlanta; j++){
+                        if(this.plantas[i][j]!=""){
+                            devuelve+=`<b>${j}${String.fromCharCode(i+65)}</b>`;
+                        }
+                    }
+                }
+                return devuelve;
+            }
+
+
+        } 
+
+
+        let Parking1=new Parking("Parking1",11);
+        let Parking2=new Parking("Parking2",10);
+        let Parking3=new Parking("Parking3",5);
+
+        //console.log(Parking1.parkingLleno());
+
+
+    </script>
+    
+</body>
+</html>
